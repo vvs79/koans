@@ -76,7 +76,7 @@ class Dice
     # puts @@arr_pl
 	@n = n
 	if @@arr_pl.size < @n 
-	  puts 'Гравця не існує'
+	  puts 'Player is not exist'
 	  enter
 	else
 	  arr_sum = 6.times.map{ |i| i = 1 + Random.rand(5) }
@@ -92,7 +92,8 @@ class Dice
   end
 
   def enter
-      print 'Введіть номер гравця який кидає кубіки : '
+      # print 'Введіть номер гравця який кидає кубіки : '
+      print 'Enter number of player : '
 	  pl_ = gets
 	  
 	  sum(pl_.to_i)
@@ -100,12 +101,13 @@ class Dice
   
 end
 
-print 'Введіть кількість гравців (від 2 до 6) : '
+# print 'Введіть кількість гравців (від 2 до 6) : '
+print 'Enter how many players (from 2 to 6) : '
 pl = gets
 
 while !((2..6).include?(pl.to_i)) do
-  puts 'ПОМИЛКА! Спробуйте ще.'
-  print 'Введіть кількість гравців (від 2 до 6) : '
+  puts 'ERROR! Try again'
+  print 'Enter how many players (from 2 to 6) : '
   pl = gets
 end
 
