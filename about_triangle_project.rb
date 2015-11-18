@@ -5,7 +5,7 @@ require './triangle'
 
 class AboutTriangleProject < Neo::Koan
   def test_equilateral_triangles_have_equal_sides
-    assert_equal :equilateral, triangle(2, 2, 2)
+    assert_equal :equilateral, triangle(2, 2, 2)       # did it
     assert_equal :equilateral, triangle(10, 10, 10)
   end
 
